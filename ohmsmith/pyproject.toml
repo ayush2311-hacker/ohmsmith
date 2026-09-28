@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ohmsmith"
+version = "0.1.0"
+description = "Find the best standard-value (E-series) resistor networks, voltage dividers and RC filters."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Ayush Murlidharan" }]
+keywords = ["electronics", "resistor", "e-series", "voltage-divider", "rc-filter", "cli"]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+ohmsmith = "ohmsmith.cli:main"
+
+[tool.setuptools]
+packages = ["ohmsmith"]
